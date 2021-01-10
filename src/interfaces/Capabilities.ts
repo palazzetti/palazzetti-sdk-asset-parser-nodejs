@@ -1,0 +1,51 @@
+export interface Capabilities {
+
+    flag_modalita_ecostart?: boolean;
+    flag_sincronizzazione_orario?: boolean;
+    flag_presenza_chrono?: boolean;
+    flag_impostazione_setpoint?: boolean;
+    flag_accensione_macchina?: boolean;
+    flag_presenza_errore_macchina?: boolean;
+    flag_prenotazione_accensione_pellet?: boolean;
+    flag_tipologia_aria?: boolean;
+    flag_tipologia_idro?: boolean;
+    flag_presenza_ventilatore?: boolean;
+    value_fan_function_first?: number;
+    flag_presenza_zero_speed_fan?: boolean;
+    flag_presenza_ventilatore_mod_auto?: boolean;
+    flag_presenza_ventilatore_mod_high?: boolean;
+    flag_presenza_ventilatore_mod_prop?: boolean;
+    flag_presenza_primo_ventilatore?: boolean;
+    flag_presenza_secondo_ventilatore?: boolean;
+    flag_presenza_terzo_ventilatore?: boolean;
+    flag_presenza_sensore_pellet_leveltronic?: boolean;
+    flag_presenza_sensore_pellet_capacitivo?: boolean;
+    value_leveltronic_minimo?: number;
+    value_leveltronic_soglia?: number;
+    value_leveltronic_level?: number;
+    flag_presenza_temperatura_combustione?: boolean;
+    flag_presenza_porta?: boolean;
+    flag_presenza_luci?: boolean;
+    value_tipologia_macchina?: number;
+    value_accensione_macchina?: number;
+    value_descrizione_temperatura_aria?: number;
+    value_descrizione_temperatura_idro?: number;
+    value_descrizione_sonda_t1_idro?: number;
+    value_temperatura_sonda_principale?: number;
+    value_descrizione_sonda_principale?: number;
+    value_temperatura_sonda_t1_idro?: number;
+    value_temperatura_sonda_t2_idro?: number;
+    value_temperatura_sonda_combustione_legna?: number;
+    value_power_rilevato?: number;
+    value_setpoint_minimo?: number;
+    value_setpoint_massimo?: number;
+    value_setpoint_impostato?: number;
+    value_power_impostato?: number;
+    value_fan_first?: number;
+    value_fan_second?: number;
+    value_fan_third?: number;
+    value_fan_limits?: number[];
+    value_apertura_porta?: number;
+    value_accensione_luce?: number;
+
+}

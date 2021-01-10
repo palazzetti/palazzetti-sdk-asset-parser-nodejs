@@ -7,7 +7,14 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./lib/esm",
-    "declaration": true
+    "declaration": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "types": [
+        "node",
+        "semver-compare"
+    ]
   },"include": [
     "./src"
   ]
