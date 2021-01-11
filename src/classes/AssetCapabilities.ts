@@ -4,6 +4,7 @@ export class AssetCapabilities {
     flagHasEcostart?: boolean;
     flagHasTimeSync?: boolean;
     flagHasChrono?: boolean;
+    flagHasPower?: boolean;
     flagHasSetpoint?: boolean;
     flagHasSwitchOnOff?: boolean;
     flagErrorStatus?: boolean;
@@ -54,6 +55,7 @@ export class AssetCapabilities {
         this.flagHasEcostart = capabilities?.flag_modalita_ecostart ?? false;
         this.flagHasTimeSync = capabilities?.flag_sincronizzazione_orario ?? false;
         this.flagHasChrono = capabilities?.flag_presenza_chrono ?? false;
+        this.flagHasPower = (!(capabilities?.flag_assenza_regolazione_potenza ?? false) ? true : false);
         this.flagHasSetpoint = capabilities?.flag_impostazione_setpoint ?? false;
         this.flagHasSwitchOnOff = capabilities?.flag_accensione_macchina ?? false;
         this.flagErrorStatus = capabilities?.flag_presenza_errore_macchina ?? false;

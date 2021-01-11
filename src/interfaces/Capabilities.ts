@@ -3,6 +3,7 @@ export interface Capabilities {
     flag_modalita_ecostart?: boolean;
     flag_sincronizzazione_orario?: boolean;
     flag_presenza_chrono?: boolean;
+    flag_assenza_regolazione_potenza?: boolean;
     flag_impostazione_setpoint?: boolean;
     flag_accensione_macchina?: boolean;
     flag_presenza_errore_macchina?: boolean;
