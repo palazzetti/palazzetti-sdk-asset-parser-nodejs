@@ -1,6 +1,6 @@
 {
   "name": "palazzetti-sdk-asset-parser",
-  "version": "17.0.2",
+  "version": "1.0.0",
   "description": "",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
