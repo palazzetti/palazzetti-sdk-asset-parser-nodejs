@@ -51,11 +51,10 @@ export class AssetCapabilities {
     valueLightStatus?: number;
 
     constructor(capabilities: Capabilities) {
-
         this.flagHasEcostart = capabilities?.flag_modalita_ecostart ?? false;
         this.flagHasTimeSync = capabilities?.flag_sincronizzazione_orario ?? false;
         this.flagHasChrono = capabilities?.flag_presenza_chrono ?? false;
-        this.flagHasPower = (!(capabilities?.flag_assenza_regolazione_potenza ?? false) ? true : false);
+        this.flagHasPower = !(capabilities?.flag_assenza_regolazione_potenza ?? false) ? true : false;
         this.flagHasSetpoint = capabilities?.flag_impostazione_setpoint ?? false;
         this.flagHasSwitchOnOff = capabilities?.flag_accensione_macchina ?? false;
         this.flagErrorStatus = capabilities?.flag_presenza_errore_macchina ?? false;
@@ -100,6 +99,5 @@ export class AssetCapabilities {
         this.valueFanLimits = capabilities?.value_fan_limits ?? undefined;
         this.valueDoorStatus = capabilities?.value_apertura_porta ?? undefined;
         this.valueLightStatus = capabilities?.value_accensione_luce ?? undefined;
-
     }
 }

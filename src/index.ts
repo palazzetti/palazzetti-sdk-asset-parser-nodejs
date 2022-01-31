@@ -1,4 +1,2 @@
-import { AssetParser } from './classes/AssetParser.js'
-export {
-  AssetParser
-}
+import { AssetParser } from './classes/AssetParser.js';
+export { AssetParser };

@@ -4,18 +4,16 @@
     "module": "ES2020",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./lib/esm",
-    "declaration": true,
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "types": [
-        "node",
-        "semver-compare"
-    ]
-  },"include": [
+    "moduleResolution": "node",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationMap": true,
+    "outDir": "./lib/types"
+  },
+  "include": [
     "./src"
-  ]
+  ],
 }

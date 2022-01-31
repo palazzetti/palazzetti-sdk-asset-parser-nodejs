@@ -1,5 +1,4 @@
 export interface Capabilities {
-
     flag_modalita_ecostart?: boolean;
     flag_sincronizzazione_orario?: boolean;
     flag_presenza_chrono?: boolean;
@@ -48,5 +47,4 @@ export interface Capabilities {
     value_fan_limits?: number[];
     value_apertura_porta?: number;
     value_accensione_luce?: number;
-
 }
