@@ -22,6 +22,7 @@ export class AssetCapabilities {
     flagHasFanThird?: boolean;
     flagHasPelletSensorLeveltronic?: boolean;
     flagHasPelletSensorCapacitive?: boolean;
+    flagHasAirOutTemperature?: boolean;
     valueLeveltronicMin?: number;
     valueLeveltronicTreshold?: number;
     valueLeveltronicLevel?: number;
@@ -38,6 +39,7 @@ export class AssetCapabilities {
     valueTempHydroT1?: number;
     valueTempHydroT2?: number;
     valueTempWoodCombustion?: number;
+    valueTempAirOut?: number;
     valuePowerCurrent?: number;
     valueSetpointMin?: number;
     valueSetpointMax?: number;
@@ -72,6 +74,7 @@ export class AssetCapabilities {
         this.flagHasFanThird = capabilities?.flag_presenza_terzo_ventilatore ?? false;
         this.flagHasPelletSensorLeveltronic = capabilities?.flag_presenza_sensore_pellet_leveltronic ?? false;
         this.flagHasPelletSensorCapacitive = capabilities?.flag_presenza_sensore_pellet_capacitivo ?? false;
+        this.flagHasAirOutTemperature = capabilities?.flag_presenza_temperatura_uscita_aria ?? false;
         this.valueLeveltronicMin = capabilities?.value_leveltronic_minimo ?? undefined;
         this.valueLeveltronicTreshold = capabilities?.value_leveltronic_soglia ?? undefined;
         this.valueLeveltronicLevel = capabilities?.value_leveltronic_level ?? undefined;
@@ -88,6 +91,7 @@ export class AssetCapabilities {
         this.valueTempHydroT1 = capabilities?.value_temperatura_sonda_t1_idro ?? undefined;
         this.valueTempHydroT2 = capabilities?.value_temperatura_sonda_t2_idro ?? undefined;
         this.valueTempWoodCombustion = capabilities?.value_temperatura_sonda_combustione_legna ?? undefined;
+        this.valueTempAirOut = capabilities?.value_temperatura_sonda_uscita_aria ?? undefined;
         this.valuePowerCurrent = capabilities?.value_power_rilevato ?? undefined;
         this.valueSetpointMin = capabilities?.value_setpoint_minimo ?? undefined;
         this.valueSetpointMax = capabilities?.value_setpoint_massimo ?? undefined;

@@ -1,18 +1,18 @@
 const AssetParserSchema = {
-    flag_modalita_ecostart: [
-        {
-            path: 'GET_STDT',
-            key: 'SYSTEM',
-            operator: 'vgt',
-            value: '2.1.1',
-        },
-    ],
     flag_assenza_regolazione_potenza: [
         {
             path: 'GET_STDT',
             key: 'STOVETYPE',
             operator: 'eq',
             value: 8,
+        },
+    ],
+    flag_modalita_ecostart: [
+        {
+            path: 'GET_STDT',
+            key: 'SYSTEM',
+            operator: 'vgt',
+            value: '10000.0.0',
         },
     ],
     flag_sincronizzazione_orario: [
@@ -74,7 +74,7 @@ const AssetParserSchema = {
             path: 'GET_STDT',
             key: 'STOVETYPE',
             operator: 'in',
-            value: [1, 3, 5, 7],
+            value: [1, 3, 5, 7, 8],
         },
     ],
     flag_tipologia_idro: [
@@ -82,7 +82,7 @@ const AssetParserSchema = {
             path: 'GET_STDT',
             key: 'STOVETYPE',
             operator: 'in',
-            value: [2, 4, 6, 8],
+            value: [2, 4, 6],
         },
     ],
     flag_presenza_ventilatore: [
@@ -189,6 +189,20 @@ const AssetParserSchema = {
             value: [7, 8],
         },
     ],
+    flag_presenza_temperatura_uscita_aria: [
+        {
+            path: 'GET_STDT',
+            key: 'STOVETYPE',
+            operator: 'in',
+            value: [7, 8],
+        },
+        {
+            path: 'GET_STDT',
+            key: 'FAN2TYPE',
+            operator: 'gt',
+            value: 1,
+        },
+    ],
     flag_presenza_porta: [
         {
             path: 'GET_STDT',
@@ -258,6 +272,10 @@ const AssetParserSchema = {
     value_temperatura_sonda_combustione_legna: {
         path: 'GET_ALLS',
         key: 'T3',
+    },
+    value_temperatura_sonda_uscita_aria: {
+        path: 'GET_ALLS',
+        key: 'T4',
     },
     value_power_rilevato: {
         path: 'GET_ALLS',
