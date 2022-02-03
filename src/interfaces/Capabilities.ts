@@ -20,6 +20,7 @@ export interface Capabilities {
     flag_presenza_terzo_ventilatore?: boolean;
     flag_presenza_sensore_pellet_leveltronic?: boolean;
     flag_presenza_sensore_pellet_capacitivo?: boolean;
+    flag_presenza_temperatura_uscita_aria?: boolean;
     value_leveltronic_minimo?: number;
     value_leveltronic_soglia?: number;
     value_leveltronic_level?: number;
@@ -36,6 +37,7 @@ export interface Capabilities {
     value_temperatura_sonda_t1_idro?: number;
     value_temperatura_sonda_t2_idro?: number;
     value_temperatura_sonda_combustione_legna?: number;
+    value_temperatura_sonda_uscita_aria?: number;
     value_power_rilevato?: number;
     value_setpoint_minimo?: number;
     value_setpoint_massimo?: number;
