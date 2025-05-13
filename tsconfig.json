@@ -3,7 +3,7 @@
     "target": "ES2015",
     "module": "ES2020",
     "strict": true,
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,

@@ -1,8 +1,8 @@
 import semverCompare from 'semver-compare';
 
-import AssetParserSchema from '../assets/AssetParserSchema';
-import { Capabilities } from '../interfaces/Capabilities';
-import { AssetCapabilities } from './AssetCapabilities';
+import AssetParserSchema from '../assets/AssetParserSchema.js';
+import { Capabilities } from '../interfaces/Capabilities.js';
+import { AssetCapabilities } from './AssetCapabilities.js';
 
 export enum AssetParserDictionary {
     ALLS = 'GET_ALLS',

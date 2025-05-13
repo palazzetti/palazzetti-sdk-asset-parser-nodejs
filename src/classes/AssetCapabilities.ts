@@ -1,4 +1,4 @@
-import { Capabilities } from '../interfaces/Capabilities';
+import { Capabilities } from '../interfaces/Capabilities.js';
 
 export class AssetCapabilities {
     flagHasEcostart?: boolean;
