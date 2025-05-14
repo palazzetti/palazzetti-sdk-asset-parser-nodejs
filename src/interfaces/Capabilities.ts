@@ -49,4 +49,5 @@ export interface Capabilities {
     value_fan_limits?: number[];
     value_apertura_porta?: number;
     value_accensione_luce?: number;
+    value_status?: number;
 }

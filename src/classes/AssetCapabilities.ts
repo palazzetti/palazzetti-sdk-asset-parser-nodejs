@@ -51,6 +51,7 @@ export class AssetCapabilities {
     valueFanLimits?: number[];
     valueDoorStatus?: number;
     valueLightStatus?: number;
+    valueStatus?: number;
 
     constructor(capabilities: Capabilities) {
         this.flagHasEcostart = capabilities?.flag_modalita_ecostart ?? false;
@@ -103,5 +104,6 @@ export class AssetCapabilities {
         this.valueFanLimits = capabilities?.value_fan_limits ?? undefined;
         this.valueDoorStatus = capabilities?.value_apertura_porta ?? undefined;
         this.valueLightStatus = capabilities?.value_accensione_luce ?? undefined;
+        this.valueStatus = capabilities?.value_status ?? undefined;
     }
 }
