@@ -52,6 +52,13 @@ export class AssetCapabilities {
     valueDoorStatus?: number;
     valueLightStatus?: number;
     valueStatus?: number;
+    flagRemoteTemperatureProbeAvailable?: boolean;
+    flagHasFanSecondSetpoint?: boolean;
+    flagHasFanThirdSetpoint?: boolean;
+    valueFanSecondTemperature?: number;
+    valueFanThirdTemperature?: number;
+    valueFanSecondSetpoint?: number;
+    valueFanThirdSetpoint?: number;
 
     constructor(capabilities: Capabilities) {
         this.flagHasEcostart = capabilities?.flag_modalita_ecostart ?? false;
@@ -105,5 +112,12 @@ export class AssetCapabilities {
         this.valueDoorStatus = capabilities?.value_apertura_porta ?? undefined;
         this.valueLightStatus = capabilities?.value_accensione_luce ?? undefined;
         this.valueStatus = capabilities?.value_status ?? undefined;
+        this.flagRemoteTemperatureProbeAvailable = capabilities?.flag_presenza_sonde_temperatura_remote ?? undefined;
+        this.flagHasFanSecondSetpoint = capabilities?.flag_presenza_setpoint_secondo_ventilatore ?? undefined;
+        this.flagHasFanThirdSetpoint = capabilities?.flag_presenza_setpoint_terzo_ventilatore ?? undefined;
+        this.valueFanSecondTemperature = capabilities?.value_temperatura_sonda_secondo_ventilatore ?? undefined;
+        this.valueFanThirdTemperature = capabilities?.value_temperatura_sonda_terzo_ventilatore ?? undefined;
+        this.valueFanSecondSetpoint = capabilities?.value_fan_second_setpoint ?? undefined;
+        this.valueFanThirdSetpoint = capabilities?.value_fan_third_setpoint ?? undefined;
     }
 }

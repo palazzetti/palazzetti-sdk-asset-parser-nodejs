@@ -50,4 +50,11 @@ export interface Capabilities {
     value_apertura_porta?: number;
     value_accensione_luce?: number;
     value_status?: number;
+    flag_presenza_sonde_temperatura_remote?: boolean;
+    flag_presenza_setpoint_secondo_ventilatore?: boolean;
+    flag_presenza_setpoint_terzo_ventilatore?: boolean;
+    value_temperatura_sonda_secondo_ventilatore?: number;
+    value_temperatura_sonda_terzo_ventilatore?: number;
+    value_fan_second_setpoint?: number;
+    value_fan_third_setpoint?: number;
 }

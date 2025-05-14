@@ -6,17 +6,20 @@ import { AssetCapabilities } from './AssetCapabilities.js';
 
 export enum AssetParserDictionary {
     ALLS = 'GET_ALLS',
+    BTLE = 'GET_BTLE',
     STDT = 'GET_STDT',
 }
 
 export class AssetParser {
     private _alls: any;
+    private _btle: any;
     private _stdt: any;
     private _grammar: any;
 
-    constructor({ get_alls, get_stdt }: { get_alls?: any; get_stdt: any }) {
+    constructor({ get_alls, get_btle, get_stdt }: { get_alls?: any; get_btle?: any; get_stdt: any }) {
         this._grammar = AssetParserSchema;
         this._alls = get_alls;
+        this._btle = get_btle;
         this._stdt = get_stdt;
     }
 
@@ -26,6 +29,10 @@ export class AssetParser {
 
     set stdt(stdt: any) {
         this._stdt = { ...(this._stdt ?? {}), ...(stdt ?? {}) };
+    }
+
+    set btle(btle: any) {
+        this._btle = { ...(this._btle ?? {}), ...(btle ?? {}) };
     }
 
     private value(dictName: AssetParserDictionary, key: string) {
@@ -41,6 +48,7 @@ export class AssetParser {
     private dict(key: AssetParserDictionary) {
         const _dict = {
             [AssetParserDictionary.ALLS]: this._alls,
+            [AssetParserDictionary.BTLE]: this._btle,
             [AssetParserDictionary.STDT]: this._stdt,
         };
 

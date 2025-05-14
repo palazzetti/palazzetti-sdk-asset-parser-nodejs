@@ -325,6 +325,64 @@ const AssetParserSchema = {
         path: 'GET_ALLS',
         key: 'LSTATUS',
     },
+    flag_presenza_sonde_temperatura_remote: [
+        {
+            path: 'GET_STDT',
+            key: 'BLEMBMODE',
+            operator: 'in',
+            value: [7, 17],
+        },
+        {
+            path: 'GET_STDT',
+            key: 'BLEDSPMODE',
+            operator: 'in',
+            value: [7, 17],
+        },
+    ],
+    flag_presenza_setpoint_secondo_ventilatore: [
+        {
+            path: 'GET_BTLE',
+            key: 'F3ST',
+            operator: 'gt',
+            value: 1,
+        },
+        {
+            path: 'GET_BTLE',
+            key: 'F3AN',
+            operator: 'in',
+            value: [2, 3],
+        },
+    ],
+    flag_presenza_setpoint_terzo_ventilatore: [
+        {
+            path: 'GET_BTLE',
+            key: 'F4ST',
+            operator: 'gt',
+            value: 1,
+        },
+        {
+            path: 'GET_BTLE',
+            key: 'F4AN',
+            operator: 'in',
+            value: [2, 3],
+        },
+    ],
+    value_temperatura_sonda_secondo_ventilatore: {
+        path: 'GET_BTLE',
+        key: 'F3TP',
+    },
+    value_temperatura_sonda_terzo_ventilatore: {
+        path: 'GET_BTLE',
+        key: 'F4TP',
+    },
+    value_fan_second_setpoint: {
+        path: 'GET_BTLE',
+        key: 'F3SP',
+    },
+    value_fan_third_setpoint: {
+        path: 'GET_BTLE',
+        key: 'F4SP',
+    },
 };
 
 export default AssetParserSchema;
