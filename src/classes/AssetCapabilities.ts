@@ -112,9 +112,9 @@ export class AssetCapabilities {
         this.valueDoorStatus = capabilities?.value_apertura_porta ?? undefined;
         this.valueLightStatus = capabilities?.value_accensione_luce ?? undefined;
         this.valueStatus = capabilities?.value_status ?? undefined;
-        this.flagRemoteTemperatureProbeAvailable = capabilities?.flag_presenza_sonde_temperatura_remote ?? undefined;
-        this.flagHasFanSecondSetpoint = capabilities?.flag_presenza_setpoint_secondo_ventilatore ?? undefined;
-        this.flagHasFanThirdSetpoint = capabilities?.flag_presenza_setpoint_terzo_ventilatore ?? undefined;
+        this.flagRemoteTemperatureProbeAvailable = capabilities?.flag_presenza_sonde_temperatura_remote ?? false;
+        this.flagHasFanSecondSetpoint = capabilities?.flag_presenza_setpoint_secondo_ventilatore ?? false;
+        this.flagHasFanThirdSetpoint = capabilities?.flag_presenza_setpoint_terzo_ventilatore ?? false;
         this.valueFanSecondTemperature = capabilities?.value_temperatura_sonda_secondo_ventilatore ?? undefined;
         this.valueFanThirdTemperature = capabilities?.value_temperatura_sonda_terzo_ventilatore ?? undefined;
         this.valueFanSecondSetpoint = capabilities?.value_fan_second_setpoint ?? undefined;
